@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Healthcare System</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <!-- Hospital List Page -->
+    <div id="hospitalListPage">
+        <h2>Choose a Hospital</h2>
+        <ul>
+            <li><a href="#" onclick="showLogin('Hospital 1')">ABC HOSPITAL</a></li>
+            <li><a href="#" onclick="showLogin('Hospital 2')">KAVERI HOSPITAL</a></li>
+            <li><a href="#" onclick="showLogin('Hospital 1')">VIJAY HOSPITAL</a></li>
+            <li><a href="#" onclick="showLogin('Hospital 2')">SERM HOSPITAL</a></li>
+            <li><a href="#" onclick="showLogin('Hospital 1')">SURYA HOSPITAL</a></li>
+            <li><a href="#" onclick="showLogin('Hospital 2')">GVN HOSPITAL</a></li>
+            <!-- Add more hospitals as needed -->
+        </ul>
+    </div>
+
+    <!-- Registration Page -->
+    <div class="register-container" id="registerContainer" style="display:none;">
+        <h2>Register Account</h2>
+
+        <form class="register-form" onsubmit="register(event)">
+            <div class="form-group">
+                <label for="newUsername">New Username:</label>
+                <input type="text" id="newUsername" required>
+            </div>
+
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+
+    <!-- Login Page -->
+    <div class="login-container" id="loginContainer" style="display:none;">
+        <h2>Login - Hospital Healthcare System</h2>
+
+        <form class="login-form" onsubmit="login(event)">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+    </div>
+
+    <!-- Main Page -->
+    <div id="mainPage" style="display:none;">
+        <!-- Your existing HTML code for the main page here -->
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#treatment-prices">Treatment Prices</a></li>
+                <li><a href="#patient-reports">Patient Reports</a></li>
+                <li><a href="#online-payments">Online Payments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hospital Facilities -->
+        <section id="facilities">
+            <h2>Hospital Facilities</h2>
+            <!-- List the hospital facilities here -->
+
+            <!-- Facility 1 -->
+            <div class="facility">
+                <img src="hosp1.webp" alt=" Facility 1">
+                <p>Facility 1 Name</p>
+            </div>
+
+            <!-- Facility 2 -->
+            <div class="facility">
+                <img src="hosp5.jpeg" alt="Facility 2">
+                <p>Facility 2 Name</p>
+            </div>
+
+            <!-- Facility 3 -->
+            <div class="facility">
+                <img src="hosp2.jpeg" alt="Facility 3">
+                <p>Facility 3 Name</p>
+            </div>
+
+            <!-- Facility 4 -->
+            <div class="facility">
+                <img src="hosp3.jpeg" alt="Facility 4">
+                <p>Facility 4 Name</p>
+            </div>
+
+            <!-- Facility 5 -->
+            <div class="facility">
+                <img src="hosp4.jpeg" alt="Facility 5">
+                <p>Facility 5 Name</p>
+            </div>
+        </section>
+
+        <!-- Treatment Prices -->
+        <section id="treatment-prices">
+            <h2>Treatment Prices</h2>
+            <!-- Display a table of treatment prices -->
+            <table>
+                <tr>
+                    <th>Treatment</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Treatment 1</td>
+                    <td>$1000</td>
+                </tr>
+                <tr>
+                    <td>Treatment 2</td>
+                    <td>$1500</td>
+                </tr>
+                <tr>
+                    <td>Treatment 3</td>
+                    <td>$1200</td>
+                </tr>
+                <!-- Add more treatments as needed -->
+            </table>
+        </section>
+
+        <!-- Patient Reports -->
+        <section id="patient-reports">
+            <h2>Patient Reports</h2>
+            <ul id="patientReportsList">
+                <!-- Patient reports will be dynamically added here -->
+            </ul>
+        </section>
+
+        <!-- Online Payments -->
+        <section id="online-payments">
+            <h2>Online Payments</h2>
+            <form onsubmit="processPayment(event)">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" required><br><br>
+
+                <label for="treatment-type">Select Treatment Type:</label>
+                <select id="treatment-type">
+                    <option value="treatment1">Treatment 1</option>
+                    <option value="treatment2">Treatment 2</option>
+                    <!-- Add more options as needed -->
+                </select><br><br>
+
+                <label for="amount">Amount (USD):</label>
+                <input type="number" id="amount" required><br><br>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" required><br><br>
+
+                <label for="expiration">Expiration Date:</label>
+                <input type="text" id="expiration" required placeholder="MM/YYYY"><br><br>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required><br><br>
+
+                <button type="submit">Pay Now</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Hospital Healthcare System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

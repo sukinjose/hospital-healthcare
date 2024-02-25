@@ -1,0 +1,200 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #0077cc;
+}
+
+/* Navigation Menu styles */
+nav {
+    background-color: #b0c4de;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0077cc;
+}
+
+/* Hospital List Page styles */
+#hospitalListPage {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#hospitalListPage ul {
+    list-style: none;
+}
+
+#hospitalListPage li {
+    margin: 10px;
+}
+
+#hospitalListPage a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hospitalListPage a:hover {
+    background-color: #005088;
+}
+
+/* Register and Login Page styles */
+.register-container,
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005088;
+}
+
+/* Main Page styles */
+#mainPage {
+    margin: 50px 0;
+}
+
+/* Facility styles */
+.facility {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Regular size facility image style */
+.facility img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Small size facility image style */
+.facility img.small {
+    max-width: 50%;
+    /* Adjust the percentage as needed for small size */
+    height: auto;
+}
+
+/* Treatment Prices styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #0077cc;
+    color: #fff;
+}
+
+/* Patient Reports styles */
+#patientReportsList {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#patientReportsList li {
+    margin-bottom: 10px;
+}
+
+/* Online Payments styles */
+section#online-payments {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    /* Adjust the max-width as needed */
+}
+
+section#online-payments form {
+    margin-top: 20px;
+}
+
+/* Style for online payment images */
+section#online-payments img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
